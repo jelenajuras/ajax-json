@@ -1,0 +1,45 @@
+{
+	"0":{
+		"id": "1", 
+		"name" : "Pero Perić", 
+		"username": "pero14", 
+		"email": "pero@pero.com"
+	},
+	"1":{
+		"id": "2", 
+		"name" : "Marko Markić", 
+		"username": "marko15", 
+		"email": "marko@marko.com"
+	},
+	"2":{
+		"id": "3", 
+		"name" : "Ivo Ivić",
+		"username": "ivo5", 
+		"email": "ivo@ivic.com"
+	},
+	"3":{
+		"id": "4",
+		"name" : "Ana Anić", 
+		"username": "ana25", 
+		"email": "ana@ana.com"
+	},
+	"4":{
+		"id": "5", 
+		"name" : "Damir Damić", 
+		"username": "damir7", 
+		"email": "damir@damir.com"
+	},
+	"5":{
+		"id": "6",
+		"name" : "Marko Markić", 
+		"username": "marko15",
+		"email": "marko@marko.com"
+	},
+	"6":{
+		"id": "7", 
+		"name" : "Darko Darkić", 
+		"username": "darko22",
+		"email": "darko@darko.com"
+	}
+}
+

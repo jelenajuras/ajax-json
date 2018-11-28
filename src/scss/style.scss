@@ -15,172 +15,40 @@ html {
 body {
 	margin:0;
 	background-color: $light;
-}
 
-.header {
-	width: 100%;
-	min-height: 400px;
-	padding: $padding *3;
-	text-align:center;
-	background-image: url("../../img/img.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	position:relative;
-	.header-iner{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		h1 {
-			font-size: 2.5rem;
-			color: $blue-grey;
-			text-shadow: 1px 1px 5px #000000, 2px 2px 10px #ffffff;
-			transition: transform 2s;
-			&:hover {
-				transform: scale(2,2);
-			}
-		}
-		button {
-			margin: $margin *2 0;
-			padding: $padding  $padding *3 ;
-			border-radius: $border-radius;
-			text-transform: $uppercase;
-			color: $white;
-			background-color: #2f4061;
-			cursor: pointer;
-			transition: all 3s;
-			transition-timing-function: ease-in;
-			&:hover {
-				transform: scale(1.2,1.2) rotateY(360deg);
-				background-color:#425579;
-				
-			}
-		}
-		@media screen and (max-width:1300px) {
-			h1{
-				font-size: 2rem;
-			}
-			button {
-				padding: $padding  $padding *2.5 ;
-			}
-		}
-		@media screen and (max-width:980px) {
-			h1{
-				font-size: 1.62rem;
-			}
-			button {
-				padding: $padding *0.5 $padding *2 ;
-			}
-		}
+	.content {
+		width:800px;
+		margin:auto;
+		text-align:center;
+		padding: $padding *2;
 	}
 	
-}
-
-.container {
-	width: $container-fluid;
-	max-width: $container;
-
-	@media screen and (max-width:1300px) {
-		max-width: $container - 320;
+	.btn {
+		margin: 20px;
+		padding: 5px 10px;
+		border-radius: 5px;
+		cursor:pointer;
 	}
-	@media screen and (max-width:980px) {
-		max-width: $container - 520;
+	.btn:hover {
+		background-color:#ccc;
 	}
-	padding: 0 $padding;
-	margin:auto;
-	
-	.row {
-		margin-left: -$margin;
-		margin-right: -$margin;
-
-		@for $col from 1 through 12{
-		 .col-#{$col}{
-				width: 8.3333% * $col;
-			}
-		}
-		[class*="col-"]{
-			float:left;	
-			padding: $padding;
-		}
-		
-		@media screen and (max-width:1300px) {
-			@for $col from 1 through 12{
-			 .col-md-#{$col}{
-					width: 8.3333% * $col;
-				}
-			}
-		}
-		@media screen and (max-width:980px) {
-			@for $col from 1 through 12{
-			 .col-sm-#{$col}{
-					width: 8.3333% * $col;
-				}
-			}
-		}
-	}
-}
-
-.card h2 {
-	text-align: $text-center;
-	text-shadow: $text-shadow;
-	padding:$padding 0;
-}
-
-.card {
-	margin: $margin *2 0;
-	padding: $padding $padding *2;
-	@include border-radius(10px)
-	background-color: $blue;
-	border: $border;
-	box-shadow: $box-shadow;
-	color: $light;
-	text-align: $text-left;
-	transition: transform 2s;
-		&:hover {
-			transform: scale(1.1,1.1);
-			background-color:#425579;
-			
-		}
-}
-
-.nav {
-	width: 100%;
-	height: 60px;
-	color: #3b4861;
-	background-color: transparent;
-	padding: 3rem;
-	position:fixed;
-	z-index:1;
-	
-	p {
-		display:inline-block;
-		position:absolute;
-		bottom:0;
-		left:0;
-		padding: 10px;
-		margin: 0 20px;
-		font-size: 1.5rem;
-		font-weight:bold;
-	}
-	.nav-iner {
-		position:absolute;
-		bottom:0;
-		right:0;
-		margin: 0 20px;
-		padding: 10px;
-		list-style-type:none;
-
-		li {
-			display:inline-block;
-			margin: 0 $margin;
-			cursor: pointer;
-			font-size: 0.85rem;
-			
-		}
-		li:first-child{
-			border-bottom: 2px solid $blue;
-			}
+	table {
+		width:100%;
+		margin-top:$margin;
+		border-collapse:collapse;
 	}
 	
-}
+	th,td {
+		border:1px solid $dark;
+		padding:10px;
+		font-size: 0.875rem;
+	}
+	
+	td {
+		text-align:left;
+	}
+	preloader {
+		margin-top: $margin;
+		color: $red;
+	}
+}	
