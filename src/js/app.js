@@ -4,17 +4,29 @@ var handleContent = function () {
 	
 	$('.btn').click(function(e){
 		e.preventDefault();
-		
+		var btn = $(this);
 		$.ajax({
 			url: "data/user.json",
 			type: "GET",
 			data: {"id": 1},
 			beforeSend: function(){
+				btn.prop('disabled','disabled'); // skinuti property
+			//	btn.unbind('click');   			 // ili skinuti event
 				preloader.empty();
 				preloader.append(ayaxLoader);
 			},
 			success: function(result, status, xhr){
 				//console.log(result);
+				var text;
+				$.each(result, function(key,value){
+					text = "<tr><td>" + value.id + "</td>";
+					text += "<td>" +  value.name + "</td>";
+					text += "<td>" +  value.username + "</td>";
+					text += "<td>" + value.email + "</td></tr>";
+					$(".tbody").append(text);
+					
+				});
+				console.log(btn);
 			},
 			error:function(xhr, status, error){
 				if(error){
@@ -27,19 +39,6 @@ var handleContent = function () {
 			},
 			complete: function(result){
 				preloader.empty();
-				console.log(result.responseJSON);
-				
-				var text;
-				for (x in result.responseJSON) {
-					text = "<tr><td>" + resutl.[x]["id"] + "</td>";
-					text += "<td>" + resutl.[x]["name"] + "</td>";
-					text += "<td>" + resutl.[x]["username"] + "</td>";
-					text += "<td>" + resutl.[x]["email"] + "</td></tr>";
-					$(".tbody").append(text);
-					console.log(text);
-				};
-				
-				
 			}
 		});
 	});
